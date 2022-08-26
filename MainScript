@@ -1,0 +1,19 @@
+
+
+game:GetService("RunService").Stepped:Connect(function ()
+	if game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') then
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end
+)
+
+for g, h in next, workspace.Checkpoints:GetChildren() do
+	if h.ClassName == 'Part' then
+
+		for bitch = 1, 7 do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = h.CFrame
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = h.CFrame
+		end
+	end
+end
